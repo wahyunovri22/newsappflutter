@@ -1,6 +1,6 @@
 
 
-import 'package:berita_kita/data_berita.dart';
+import 'package:berita_kita/model/data_berita.dart';
 import 'package:berita_kita/item_berita.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

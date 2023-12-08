@@ -1,6 +1,7 @@
 import 'package:berita_kita/login_screen.dart';
-import 'package:berita_kita/login_screen2.dart';
+import 'package:berita_kita/ui/login/login_screen2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: EasyLoading.init(),
       title: 'Aplikasi Berita',
       theme: ThemeData(
         // This is the theme of your application.
