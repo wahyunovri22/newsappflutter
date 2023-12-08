@@ -1,9 +1,13 @@
+import 'package:berita_kita/helper/Config.dart';
 import 'package:berita_kita/login_screen.dart';
+import 'package:berita_kita/ui/home/home_screen2.dart';
 import 'package:berita_kita/ui/login/login_screen2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+Future<void> main() async {
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -36,7 +40,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen2(),
+      home: getUserCredential() != null ? HomeScreen2(title: "") : LoginScreen2(),
     );
   }
 }
